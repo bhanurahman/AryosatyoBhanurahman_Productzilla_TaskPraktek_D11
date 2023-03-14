@@ -1,0 +1,32 @@
+class Mobil {
+    // properti class
+    warna = 'merah';
+    merk = 'honda';
+    tipe = 'jazz';
+    ukuran = [1000, 2000, 3000];
+    getDataMobil() {
+        const obj = {
+            warnamobil: this.warna,
+            merkDariMobil : this.merk,
+            tipeMobilTersebut : this.tipe,
+            ukuranMobilnya : this.ukuran,
+        };
+        return obj;
+    }
+
+    setDataMobil(warna, merk, tipe, ukuran) {
+        this.warna = warna;
+        this.merk = merk;
+        this.tipe = tipe;
+        this.ukuran = ukuran;
+    }
+}
+
+//instansiasi sebuah Class
+const m = new Mobil();
+console.log(m.warna);
+let dataMobil = m.getDataMobil();
+console.log(dataMobil);
+m.setDataMobil('hijau', 'kijang', 'Innova', [2000, 1500, 4000])
+dataMobil = m.getDataMobil();
+console.log(dataMobil);

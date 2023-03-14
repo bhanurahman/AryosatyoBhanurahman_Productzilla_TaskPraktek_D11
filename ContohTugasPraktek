@@ -1,0 +1,42 @@
+class rectangle {
+    width;
+    height;
+
+    setWidth(width) {
+        this.width = width;
+    }
+
+    setHeight(height) {
+        this.height = height; 
+    }
+    
+    area() {   
+        return this.width * this.height;
+
+    }
+
+    perimeter() {
+        return 2 * this.width + 2 * this.height;
+    }
+
+    isquare() {
+        let square = false
+        if (this.height === this.width) {
+            square = true;
+        
+        }
+        return square;
+    }
+}
+
+const kotak1 = new rectangle();
+kotak1.setHeight(10);
+kotak1.setWidth(10);
+const kotak1Area = kotak1.area();
+const kotak1Perimeter = kotak1.perimeter();
+const kotak1IsSquare = kotak1.isquare();
+console.log('area', kotak1Area);
+console.log('perimeter', kotak1Perimeter);
+console.log('is square?', kotak1IsSquare);
+
+

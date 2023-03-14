@@ -1,0 +1,65 @@
+class Transaksi {
+    nomorRekening;
+    saldo;
+    saldoDepo;
+    SaldoTarik;
+
+
+    setRekening(nomorRekening) {
+        this.nomorRekening = nomorRekening;
+    }
+
+    setSaldo(saldo) {
+        this.saldo = saldo; 
+    }
+
+    setSaldoDepo(saldoDepo) {
+        this.saldoDepo = saldoDepo;
+
+    }
+    setSaldoTarik(SaldoTarik) {
+        this.SaldoTarik = SaldoTarik
+    }
+
+    
+    deposit() {   
+        return this.saldo +this.saldoDepo
+
+    }
+
+    narikSaldo() {
+        return this.saldoDepo + this.saldo - this.SaldoTarik
+    }
+
+    totalSaldo() {
+        return this.saldo + this.saldoDepo - this.SaldoTarik
+    }
+}
+
+const rekening1 = new Transaksi();
+rekening1.setRekening(03401245);
+rekening1.setSaldo(500000);
+rekening1.setSaldoDepo(100000);
+rekening1.setSaldoTarik(300000);
+const rekening1Deposit = rekening1.deposit();
+const rekening1NarikSaldo = rekening1.narikSaldo();
+const rekening1TotalSaldo = rekening1.totalSaldo();
+console.log('rekening 1');
+console.log('Setelah Deposit', rekening1Deposit);
+console.log('setelah Tarik Tunai', rekening1NarikSaldo);
+console.log('Jumlah Akhir Saldo', rekening1TotalSaldo);
+
+console.log('=================================================');
+
+const rekening2 = new Transaksi();
+rekening2.setRekening(12320846);
+rekening2.setSaldo(800000);
+rekening2.setSaldoDepo(500000);
+rekening2.setSaldoTarik(200000);
+const rekening2Deposit = rekening2.deposit();
+const rekening2NarikSaldo = rekening2.narikSaldo();
+const rekening2TotalSaldo = rekening2.totalSaldo();
+console.log('rekening 2');
+console.log('Setelah Deposit', rekening2Deposit);
+console.log('setelah Tarik Tunai', rekening2NarikSaldo);
+console.log('Jumlah Akhir Saldo', rekening2TotalSaldo);
